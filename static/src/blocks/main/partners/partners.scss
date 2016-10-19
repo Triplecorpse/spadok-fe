@@ -1,0 +1,26 @@
+.partners {
+  &-header {
+    @include block-header(#000);
+  }
+  &-wrapper {
+    min-height: 285px;
+  }
+  &-logo {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &-wrapper {
+      min-height: 60px;
+      position: relative;
+    }
+  }
+}
+
+svg image:hover {
+  opacity: 0;
+}

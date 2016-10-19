@@ -1,0 +1,29 @@
+.project-description {
+  &-header {
+    @include block-header(#000);
+  }
+  &-text {
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+  &-wrapper {
+      margin-bottom: 70px;
+  }
+  &-gallery {
+    &-container {
+    }
+    &-slide {
+      &-image {
+        background: #ccc no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 520px;
+      }
+    }
+    &-bullet-wrapper {
+      color: #fff;
+      font-size: 1.8rem;
+    }
+  @include carousel-controls(50px, 240px, 480px, #ffffff);
+  }
+}

@@ -1,0 +1,20 @@
+.project-other-projects-wrapper{
+  margin: auto;
+  margin-bottom: 80px;
+  width: 430px;
+  height: 439px;
+  overflow: hidden;
+}
+
+@media (min-width: 1290px) {
+  .project-other-projects-wrapper {
+    width: 860px;
+  }
+}
+
+@media (min-width: 1720px) {
+  .project-other-projects-wrapper {
+    width: 1290px;
+  }
+}
+

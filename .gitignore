@@ -1,8 +1,4 @@
-/.idea
 /node_modules
 /static/node_modules
 /static/bower_components
 /design
-/static/*.*
-/static/src
-/media/

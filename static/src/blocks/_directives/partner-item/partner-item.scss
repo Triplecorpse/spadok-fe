@@ -1,0 +1,109 @@
+.partner-item {
+  &-wrapper {
+    border: 1px solid #eaeaea;
+    background-color: #f8f9fb;
+    height: 280px;
+    position: relative;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    &.maximized {
+      height: auto;
+    }
+  }
+  &-logo {
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    left: 8px;
+    top: 8px;
+    &-wrapper {
+      border: 1px solid #eaeaea;
+      background-color: #fff;
+      height: 71px;
+      width: 71px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+  }
+  &-info-wrapper {
+    margin: 0 45px 120px 91px;
+  }
+  &-name-wrapper {
+    margin: 0 45px 0 91px;
+  }
+  &-detailed-info {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-top: 15px;
+    &-index {
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      width: 19px;
+      height: 19px;
+      border: 1px solid black;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    &-text {
+      display: inline-block;
+      width: 90%;
+      margin-left: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      .partner-item-wrapper.maximized & {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+      }
+    }
+    &-button {
+      @include button-type-2(rgba(94, 136, 194, 0.4), #5e88c2, true);
+      position: absolute;
+      bottom: 30px;
+    }
+  }
+  &-name {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    margin: 0;
+    width: 100%;
+    &-header {
+      margin: 0;
+      display: inline-block;
+    }
+    &-wrapper {
+      height: 71px;
+      margin-top: 10px;
+      position: relative;
+    }
+  }
+  &-brief {
+    &-info {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      right: 0;
+      font-size: 1.4rem;
+      letter-spacing: .1em;
+      color: #bbbbbb;
+      font-weight: 600;
+      &-qty {
+        display: inline-block;
+        border: 1px solid #bbb;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+}

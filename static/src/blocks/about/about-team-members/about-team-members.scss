@@ -1,0 +1,45 @@
+.about-team-members {
+  &-wrapper {
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &-item {
+    width: 290px;
+    height: 230px;
+    margin-bottom: 50px;
+    &-picture {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    &-header {
+      color: #477ecf;
+      font-size: 1.8rem;
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    &-position {
+      color: #000;
+      font-size: 1.4rem;
+      font-weight: 100;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  &-button {
+    margin: 0 auto 85px;
+    &-wrapper {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
