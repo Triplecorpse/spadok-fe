@@ -9,6 +9,6 @@ app.use(express.static('static/dist'));
 
 routerGeneralController(app);
 
-app.listen(env.NODE_PORT || 3000, env.NODE_IP || 'localhost', () => {
+app.listen(env.PORT || 3000, () => {
   console.log(`Application worker ${process.pid} started...`);
 });
