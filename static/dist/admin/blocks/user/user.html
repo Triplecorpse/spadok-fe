@@ -1,0 +1,125 @@
+<form name="form" form-type="{{view}}" ng-submit="submit(form, $event)" autocomplete="off">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Russian</h3>
+            <div class="form-group">
+                <label for="user-name-rus">Display Name</label>
+                <input type="text" class="form-control" id="user-name-rus" placeholder="Name" ng-model="activeUser.name.ru" autocomplete="off" ng-disabled="(activeUser.name === 'admin') && (view === 'edit')">
+            </div>
+            <div class="form-group">
+                <label for="user-position-rus">Position</label>
+                <input type="text" class="form-control" id="user-position-rus" placeholder="Position" ng-model="activeUser.position.ru" autocomplete="off" ng-disabled="(activeUser.name === 'admin') && (view === 'edit')">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>English</h3>
+            <div class="form-group">
+                <label for="user-name-eng">Display Name</label>
+                <input type="text" class="form-control" id="user-name-eng" placeholder="Name" ng-model="activeUser.name.en" autocomplete="off" ng-disabled="(activeUser.name === 'admin') && (view === 'edit')">
+            </div>
+            <div class="form-group">
+                <label for="user-position-eng">Position</label>
+                <input type="text" class="form-control" id="user-position-eng" placeholder="Position" ng-model="activeUser.position.en" autocomplete="off" ng-disabled="(activeUser.name === 'admin') && (view === 'edit')">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Translated with <a href="https://translate.yandex.com/">Yandex Translate</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="user-login">Login</label>
+                <input type="text" class="form-control" id="user-login" placeholder="Login" ng-model="activeUser.login" autocomplete="off" ng-disabled="view === 'edit'" required>
+            </div>
+            <div class="form-group">
+                <label for="user-email">Email</label>
+                <input type="email" class="form-control" id="user-email" placeholder="Email" ng-model="activeUser.email" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="user-password">Password</label>
+                <input type="password" class="form-control" id="user-password" placeholder="Password" ng-model="activeUser.password" autocomplete="off" required>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-mg-12">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="">
+                        <img class="media-object img-circle user-img" src="{{activeUser.picture}}" alt="avatar">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <div class="form-group">
+                        <label for="project-picture">Avatar</label>
+                        <input type="file" id="project-picture" name="images" nv-file-select uploader="uploaderAvatar">
+                        <p class="help-block">Upload a picture to be considered as avatar.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-picture-url">...or enter its url</label>
+                        <input type="text" class="form-control" id="project-picture-url" placeholder="Picture URL" ng-model="activeUser.picture">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="activeUser.canHandleProjects" ng-disabled="((activeUser.login === 'admin') && (view === 'edit')) || !loggedUser.canHandleProjects"> can handle projects
+                </label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="activeUser.canHandleUsers" ng-disabled="((activeUser.login === 'admin') && (view === 'edit')) || !loggedUser.canHandleUsers"> can handle users
+                </label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="activeUser.isInTeam" ng-disabled="activeUser.login === 'admin' || (!loggedUser.isInTeam && !loggedUser.login === 'admin')"> is a team member
+                </label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="activeUser.canHandleReviews" ng-disabled="((activeUser.login === 'admin') && (view === 'edit')) || !loggedUser.canHandleReviews"> can handle reviews
+                </label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="activeUser.canHandlePageData" ng-disabled="((activeUser.login === 'admin') && (view === 'edit')) || !loggedUser.canHandlePageData"> can handle page data
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row top-line>
+        <div class="col-md-4">
+            <div ng-switch="view">
+                <div ng-switch-when="new">
+                    <button type="submit" class="btn btn-default project-add" value="Add" ng-disabled="isQueriing">Add</button>
+                </div>
+                <div ng-switch-when="edit">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="canDelete" ng-disabled="(activeUser.name === 'admin') && (view === 'edit')"> Really delete user
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-danger" value="Delete" ng-disabled="!canDelete" ng-click="delete()">Delete</button>
+                    <button type="submit" class="btn btn-default" value="Update" ng-disabled="isQueriing">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
