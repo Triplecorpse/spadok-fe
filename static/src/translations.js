@@ -2,7 +2,7 @@ angular.module('app').constant('translations', {
     //translation data
     interface: {
         ru: {
-            currency: 'грн',
+            currency: '{{value}} грн',
             header: {
                 name: 'Спадок',
                 logo: 'Благотворительный фонд "Спадок"',
@@ -19,7 +19,7 @@ angular.module('app').constant('translations', {
                     money: 'необходимо'
                 },
                 stats: {
-                    toBeginning: 'до начала проекта',
+                    toBeginning: 'до начала',
                     left: 'осталось собрать'
 
                 }

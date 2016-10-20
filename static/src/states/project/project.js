@@ -5,6 +5,6 @@ angular.module('app').controller('projectController', ['$stateParams', 'dataServ
             return element._id === $stateParams.projectId;
         });
         vm.isProjectLoaded = true;
-        document.title = `${vm.project.rusName} - Спадок`;
+        document.title = `${vm.project.name.ru} - Спадок`;
     });
 }]);

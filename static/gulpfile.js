@@ -32,19 +32,6 @@ var paths = {
     robots:['./src/robots.txt']
 };
 
-var admin = {
-    scripts: ['./bower_components/jquery/dist/jquery.min.js',
-        './bower_components/angular/angular.min.js',
-        './src/js/vendor/angular-file-upload.min.js',
-        './src/js/vendor/underscore-min.js',
-        './src/admin/js/bootstrap.min.js',
-        './src/admin/js/index.js',
-        './src/admin/blocks/**/*.js', './src/admin/services/**/*.js'],
-    styles: ['./src/admin/css/bootstrap.min.scss',
-        './src/admin/css/general.scss',
-        './src/admin/blocks/**/*.scss']
-};
-
 gulp.task('scripts:concat', () => {
     return gulp.src(paths.scripts)
         .pipe(sourcemaps.init())
@@ -70,7 +57,7 @@ gulp.task('build', () => {
 });
 
 gulp.task('watch', () => {
-    return gulp.watch('src/**', ['build', 'admin:build']);
+    return gulp.watch('./src/**', ['build']);
 });
 
 gulp.task('copy:fonts', () => {
@@ -93,30 +80,6 @@ gulp.task('copy:robots', () => {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('admin:build', () => {
-    runSequence(['admin:styles', 'admin:scripts']);
-});
-
-gulp.task('admin:styles', () => {
-    return gulp.src(admin.styles)
-        .pipe(sourcemaps.init())
-        .pipe(concat('style.scss'))
-        .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./dist/admin/style/'));
-});
-
-gulp.task('admin:scripts', () => {
-    return gulp.src(admin.scripts)
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(concat('script.js'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./dist/admin/script'));
-});
-
 gulp.task('default', () => {
-    runSequence(['build', 'admin:build', 'watch'])
+    runSequence(['build', 'watch'])
 });
