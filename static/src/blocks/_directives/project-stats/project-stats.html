@@ -6,10 +6,14 @@
             <div class="project-stats-stat-icon-text">{{project.people | spdEnding : 'volunteer'}}</div>
         </div>
 
-        <div class="project-stats-stat">
+        <div class="project-stats-stat" ng-if="!project.isCompleted">
             <div class="project-stats-stat-icon-digit">{{project.days}}</div>
             <div class="project-stats-stat-icon-text">{{project.days | spdEnding : 'day'}} {{"interface.directives.stats.toBeginning" | translate}}</div>
-            <!--<div class="project-stats-stat-icon-text" translate="interface.directives.stats.toBeginning"></div>-->
+        </div>
+
+        <div class="project-stats-stat" ng-if="project.isCompleted">
+            <div class="project-stats-stat-icon-digit">{{-project.days}}</div>
+            <div class="project-stats-stat-icon-text">{{project.days | spdEnding : 'day'}} {{"interface.directives.stats.wasCompletedOn" | translate}}</div>
         </div>
 
         <div class="project-stats-stat">

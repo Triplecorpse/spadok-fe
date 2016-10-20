@@ -20,8 +20,8 @@ angular.module('app').constant('translations', {
                 },
                 stats: {
                     toBeginning: 'до начала',
+                    wasCompletedOn: 'назад завершен',
                     left: 'осталось собрать'
-
                 }
             },
             pages: {
@@ -83,6 +83,7 @@ angular.module('app').constant('translations', {
                 },
                 stats: {
                     toBeginning: 'to start',
+                    wasCompletedOn: 'ago was finished',
                     left: 'left to collect'
                 }
             },
