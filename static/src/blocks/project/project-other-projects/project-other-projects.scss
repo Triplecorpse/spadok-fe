@@ -18,3 +18,8 @@
   }
 }
 
+@media print {
+    .project-other-projects-wrapper {
+        display: none;
+    }
+}

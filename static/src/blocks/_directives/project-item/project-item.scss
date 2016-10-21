@@ -82,3 +82,9 @@
     }
   }
 }
+
+@media print {
+    .project-item-wrapper {
+        display: none;
+    }
+}

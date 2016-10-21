@@ -113,3 +113,41 @@
     }
   }
 }
+
+@media print {
+    .project-header {
+        &-image {
+            background: none !important;
+            height: auto;
+            &-layer {
+                display: none;
+            }
+            &-header {
+                margin-top: 30px;
+                color: #000;
+                font-weight: normal;
+                position: initial;
+            }
+            &-play-button, &-text {
+                display: none;
+            }
+        }
+        &-info {
+            background-color: #fff;
+            border-top: 1px double black;
+            border-bottom: 1px solid black;
+            height: auto;
+            &-text {
+                color: #000;
+                position: relative;
+                margin: 30px auto;
+                transform: translateY(0);
+                top: 0;
+                left: 0;
+                &-share-wrapper {
+                    display: none;
+                }
+            }
+        }
+    }
+}

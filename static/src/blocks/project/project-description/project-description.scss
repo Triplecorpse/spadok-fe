@@ -27,3 +27,11 @@
   @include carousel-controls(50px, 240px, 480px, #ffffff);
   }
 }
+
+@media print {
+    .project-description {
+        &-gallery {
+            display: none;
+        }
+    }
+}

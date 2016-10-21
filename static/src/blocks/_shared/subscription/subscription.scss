@@ -58,3 +58,9 @@
     width: 100%;
   }
 }
+
+@media print {
+    .subscription {
+        display: none;
+    }
+}

@@ -11,7 +11,7 @@
                         projects: setProjectTranslateion('en'),
                         team: setTeamTranslateion('en'),
                         page: setPageDataTranslateion('en'),
-                        partners: setPartnerAchievementTranslateion('en')
+                        partners: setPartnerAchievementTranslation('en')
                     };
                     console.log(translations, options.key);
                 } else if (options.key === 'ru') {
@@ -20,7 +20,16 @@
                         projects: setProjectTranslateion('ru'),
                         team: setTeamTranslateion('ru'),
                         page: setPageDataTranslateion('ru'),
-                        partners: setPartnerAchievementTranslateion('ru')
+                        partners: setPartnerAchievementTranslation('ru')
+                    };
+                    console.log(translations, options.key);
+                } else if (options.key === 'uk') {
+                    translations = {
+                        interface: config.interface.uk,
+                        projects: setProjectTranslateion('uk'),
+                        team: setTeamTranslateion('uk'),
+                        page: setPageDataTranslateion('uk'),
+                        partners: setPartnerAchievementTranslation('uk')
                     };
                     console.log(translations, options.key);
                 }
@@ -65,7 +74,7 @@
 
         // convert achievements from {achievements: [ {ru: 'ruAch', en: 'enAch'}, ...]} to {displayAchievements: {achievement1: 'ruAch'}, ...}
         // hope maybe sometimes angular-translate will work with arrays
-        function setPartnerAchievementTranslateion(language) {
+        function setPartnerAchievementTranslation(language) {
             let values = _.map(dataService.partners, (element) => {
                 let achievements = {};
                 _.each(element.achievements, (element, index) => {

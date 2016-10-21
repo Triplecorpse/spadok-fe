@@ -96,3 +96,35 @@ $list-item-index-top: $list-item-height/2 - $list-item-index-size/2;
     }
   }
 }
+
+@media print {
+    .subprojects {
+        &-list {
+            &-wrapper {
+                border-top: 1px solid #000;
+            }
+            &-item {
+                border-bottom: 1px solid black;
+                &-index{
+                    border: 1px solid black;
+                    color: black;
+                }
+                &-is-completed {
+                    @include completion-wrapper(#000);
+                    &-bird {
+                        border-left: 2px solid black;
+                        border-bottom: 2px solid black;
+                    }
+                }
+                &-is-not-completed {
+                    visibility: hidden;
+                }
+                &-money {
+                    &-digit {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}

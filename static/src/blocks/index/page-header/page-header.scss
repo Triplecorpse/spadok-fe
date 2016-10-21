@@ -187,3 +187,9 @@ $nav-sticky-border-color: #e4e4e4;
     }
   }
 }
+
+@media print {
+    .page-header {
+        display: none;
+    }
+}

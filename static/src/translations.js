@@ -6,7 +6,7 @@ angular.module('app').constant('translations', {
             header: {
                 name: 'Спадок',
                 logo: 'Благотворительный фонд "Спадок"',
-                nav: {about: 'О нас', projects: 'Проекты', partners: 'Партнёры', contacts: 'Контакты'},
+                nav: { about: 'О нас', projects: 'Проекты', partners: 'Партнёры', contacts: 'Контакты' },
             },
             videos: "Видео с проектов",
             subscription: "Подпишись на рассылку проектов",
@@ -38,7 +38,7 @@ angular.module('app').constant('translations', {
                 },
                 projects: {
                     header: "Проекты",
-                    selectButtons: {active: "активные", completed: "реализованные"}
+                    selectButtons: { active: "активные", completed: "реализованные" }
                 },
                 project: {
                     lookVideo: "Посмотреть видео",
@@ -61,6 +61,69 @@ angular.module('app').constant('translations', {
                 subscription: {
                     header: 'Подпишись на рассылку проектов',
                     inscription: 'Подписка даёт возможность получать информацию о появлении новых проектов и событий. Ваша личная информация остаётся конфиденциальной.'
+                }
+            }
+        },
+        uk: {
+            currency: '{{value}} грн',
+            header: {
+                name: 'Спадок',
+                logo: 'Благодійний фонд "Спадок"',
+                nav: { about: 'Про нас', projects: 'Проекти', partners: 'Партнеры', contacts: 'Контакти' },
+            },
+            videos: "Відео з проектів",
+            subscription: "Підпишись на розсилку проектів",
+            feedback: "Чи виникли у вас питання або пропозиції?",
+            reviews: "Відгуки",
+            partners: "Наші партнеры",
+            directives: {
+                projectItem: {
+                    button: "про проект",
+                    money: 'необхідно'
+                },
+                stats: {
+                    toBeginning: 'до початку',
+                    wasCompletedOn: 'назад завершений',
+                    left: 'залишилось зібрати'
+                }
+            },
+            pages: {
+                main: {
+                    aboutDetailed: "детальніше",
+                    projectsAbout: "про проект"
+                },
+                about: {
+                    header: "Наша міссія - допомога потребуючим",
+                    ourCommunity: "Наша спільнота",
+                    ourMission: "Наша міссія",
+                    ourTeam: "Наша команда",
+                    lookVideo: "Подивитися відео"
+                },
+                projects: {
+                    header: "Проекти",
+                    selectButtons: { active: "активні", completed: "реализованні" }
+                },
+                project: {
+                    lookVideo: "Подивитися відео",
+                    aboutProject: "Про проект",
+                    purpose: "Історія та ціль проекта",
+                    subprojects: "Підпроекти",
+                    donate: "пожертвувати",
+                    collected: "зібрано (з {{total}})"
+                },
+                partners: {
+                    header: "Наші партнеры"
+                },
+                contacts: {
+                    address: "Адреса",
+                    phone: "Телефон",
+                    email: "E-mail"
+                }
+            },
+            shared: {
+                subscription: {
+                    header: 'Підпишись на розсилку проектів',
+                    inscription: 'Підписка дає можливість отримувати інформацію про появу нових проектів і подій. Ваша особиста інформація залишається конфіденційною'
                 }
             }
         },
@@ -182,6 +245,59 @@ angular.module('app').constant('translations', {
                 callerButtonText: "вступить в команду"
             }
         },
+        uk: {
+            partners: {
+                name: "стать партнёром",
+                header: "Заполните партнёрские данные",
+                placeholders: [
+                    { placeholder: "Имя", type: "text", key: "name", value: "" },
+                    { placeholder: "Организация", type: "text", key: "organization", value: "" },
+                    { placeholder: "Email", type: "email", key: "email", value: "" },
+                    { placeholder: "Сообщение", type: '', key: "message", value: "" }
+                ],
+                action: "отправить",
+                messeage: "Предложение о партнёрстве отправлено.",
+                callerButtonText: "стать партнёром"
+            },
+            reviews: {
+                name: "оставить отзыв",
+                header: "Ваш отзыв очень важен для нас",
+                placeholders: [
+                    { placeholder: "Имя", type: "text", key: "name", value: "" },
+                    { placeholder: "Род занятия", type: "text", key: "occupation", value: "" },
+                    { placeholder: "Email", type: "email", key: "email", value: "" },
+                    { placeholder: "Отзыв", type: '', key: "message", value: "" }
+                ],
+                action: "отправить",
+                messeage: "Отзыв успешно отправлен. Ожидайте, пожалуйста, его публикации.",
+                callerButtonText: "оставить отзыв"
+            },
+            contacts: {
+                name: "Написать нам",
+                header: "Есть ли у вас вопроссы или предложения?",
+                placeholders: [
+                    { placeholder: "Имя", type: "text", key: "name", value: "" },
+                    { placeholder: "Email", type: "email", key: "email", value: "" },
+                    { placeholder: "Вопросы и предложения", type: '', key: "message", value: "" }
+                ],
+                action: "отправить",
+                messeage: "Ваше сообщение отправлено.",
+                callerButtonText: "написать нам"
+            },
+            team: {
+                name: "вступить в команду",
+                header: "Бобро пожаловать в нашу команду",
+                placeholders: [
+                    { placeholder: "Имя", type: "text", key: "name", value: "" },
+                    { placeholder: "Род занятия", type: "text", key: "occupation", value: "" },
+                    { placeholder: "Email", type: "email", key: "email", value: "" },
+                    { placeholder: "Отзыв", type: '', key: "review", value: "" }
+                ],
+                action: "отправить",
+                type: "team",
+                callerButtonText: "вступить в команду"
+            }
+        },
         en: {
             partners: {
                 name: "become a partner",
@@ -262,7 +378,30 @@ angular.module('app').constant('translations', {
                 {is: '1', out: 'внёс средства'}
             ]
         },
-         en: {
+        uk: {
+            man: [
+                { ends: '0|1|5|6|7|8|9', out: 'человек' },
+                { ends: '2|3|4', out: 'человека' },
+                { is: '11|12|13|14|15|16|17|18|19|20|21', out: 'человек' }
+            ],
+            volunteer: [
+                { ends: '1', out: 'волонтёр' },
+                { ends: '2|3|4', out: 'волонтёра' },
+                { ends: '0|5|6|7|8|9', out: 'волонтёров' },
+                { is: '11|12|13|14|15|16|17|18|19|20', out: 'волонтёров' }
+            ],
+            day: [
+                { ends: '1', out: 'день' },
+                { ends: '2|3|4', out: 'дня' },
+                { ends: '0|5|6|7|8|9', out: 'дней' },
+                { is: '11|12|13|14|15|16|17|18|19|20|21', out: 'дней' }
+            ],
+            donated: [
+                { ends: '0|1|2|3|4|5|6|7|8|9', out: 'внесли средства' },
+                { is: '1', out: 'внёс средства' }
+            ]
+        },
+        en: {
              man: [
                  {ends: '0|1|2|3|4|5|6|7|8|9', out: 'person'},
                  {is: '1', out: 'person'}

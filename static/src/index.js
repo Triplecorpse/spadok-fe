@@ -28,9 +28,10 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider', '$translat
 
     $translateProvider.fallbackLanguage('ru');
     $translateProvider.usePostCompiling(true);
-    $translateProvider.registerAvailableLanguageKeys(['en', 'ru'], {
+    $translateProvider.registerAvailableLanguageKeys(['en', 'ru', 'uk'], {
         'en_*': 'en',
-        'ru_*': 'ru'
+        'ru_*': 'ru',
+        'uk_*': 'uk'
     });
     $translateProvider.determinePreferredLanguage();
     $translateProvider.useLocalStorage();
@@ -42,7 +43,8 @@ angular.module('app').controller('appController', ['$window', '$scope', 'dataSer
 
     var langDic = {
         ru: 'рус',
-        en: 'eng'
+        en: 'eng',
+        uk: 'укр'
     };
     var vm = this;
     vm.title = "Спадок";
