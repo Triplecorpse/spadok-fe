@@ -9,6 +9,14 @@
             dataQ
         };
 
+        function addDataServiceUrl(relativeUrl) {
+            if (relativeUrl && relativeUrl.startsWith('/pmedia?')) {
+                return config.dataServiceUrl + relativeUrl;
+            } else {
+                return relativeUrl;
+            }
+        }
+
         function init() {
             var date = new Date();
 
@@ -18,7 +26,10 @@
             }
 
             function parsePartners(list) {
-                data.partners = list;
+                data.partners = _.map(list, (element) => {
+                    element.picture = addDataServiceUrl(element.picture);
+                    return element;
+                });
                 console.log(":::: DATASERVICE PARTNERS ::::", data.partners);
             }
 
@@ -38,7 +49,7 @@
                     element.collectedEur = element.moneyTotalEur - element.eur;
 
                     element.pictures = _.map(element.pictures, (pictureUrl) => {
-                        addDataServiceUrl(pictureUrl);
+                        return addDataServiceUrl(pictureUrl);
                     });
 
                     element.picture = addDataServiceUrl(element.picture)
@@ -46,13 +57,6 @@
                     return element;
                 });
 
-                function addDataServiceUrl(relativeUrl) {
-                    if (relativeUrl.startsWith('/pmedia?')) {
-                        return config.dataServiceUrl + relativeUrl;
-                    } else {
-                        return relativeUrl;
-                    }
-                }
                 console.log(":::: DATASERVICE PROJECTS ::::", data.projects);
             }
 
@@ -62,7 +66,10 @@
             }
 
             function parseUsers(list) {
-                data.users = list;
+                data.users = _.map(list, (element) => {
+                    element.picture = addDataServiceUrl(element.picture);
+                    return element;
+                });
                 console.log(":::: DATASERVICE USERS ::::", data.users);
             }
 
