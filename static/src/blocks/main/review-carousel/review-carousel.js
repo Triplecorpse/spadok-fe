@@ -9,8 +9,7 @@
             restrict: "E",
             templateUrl: "./blocks/main/review-carousel/review-carousel.html",
             controller: ['$scope', 'dataService', reviewsController],
-            controllerAs: 'reviews',
-            link: link
+            controllerAs: 'reviews'
         };
 
         function reviewsController($scope, dataService) {
@@ -43,9 +42,6 @@
 
                 });
             }
-        }
-
-        function link() {
         }
     }
 })();

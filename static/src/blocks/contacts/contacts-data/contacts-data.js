@@ -1,5 +1,5 @@
 (function() {
-    angular.module('app').directive('spdContactsData', [function() {
+    angular.module('app').directive('spdContactsData', ['dataService', function(dataService) {
 
             return {
                 restrict: "E",
@@ -10,6 +10,8 @@
 
             function controller($scope, dataService) {
                 $scope.team = dataService.team;
+                $scope.email = dataService.page.email;
+                $scope.phone = dataService.page.phone;
                 $scope.options = {
                     type: "contacts"
                 };

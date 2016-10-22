@@ -200,7 +200,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Имя", type: "text", key: "name", value: ""},
                     {placeholder: "Организация", type: "text", key: "organization", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Сообщение", type: '', key: "message", value: ""}
+                    {placeholder: "Сообщение*", type: '', key: "message", value: ""}
                 ],
                 action: "отправить",
                 message: "Предложение о партнёрстве отправлено.",
@@ -213,10 +213,10 @@ angular.module('app').constant('translations', {
                     {placeholder: "Имя", type: "text", key: "name", value: ""},
                     {placeholder: "Род занятия", type: "text", key: "occupation", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Отзыв", type: '', key: "message", value: ""}
+                    {placeholder: "Отзыв*", type: '', key: "message", value: ""}
                 ],
                 action: "отправить",
-                message: "Отзыв успешно отправлен. Ожидайте, пожалуйста, его публикации.",
+                message: "Ваш отзыв был успешно отправлен. Ожидайте, пожалуйста, его проверки.",
                 callerButtonText: "оставить отзыв"
             },
             contacts: {
@@ -225,7 +225,7 @@ angular.module('app').constant('translations', {
                 placeholders: [
                     {placeholder: "Имя", type: "text", key: "name", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Вопросы и предложения", type: '', key: "message", value: ""}
+                    {placeholder: "Вопросы и предложения*", type: '', key: "message", value: ""}
                 ],
                 action: "отправить",
                 message: "Ваше сообщение отправлено.",
@@ -238,10 +238,10 @@ angular.module('app').constant('translations', {
                     {placeholder: "Имя", type: "text", key: "name", value: ""},
                     {placeholder: "Род занятия", type: "text", key: "occupation", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Отзыв", type: '', key: "review", value: ""}
+                    {placeholder: "Сообщение*", type: '', key: "review", value: ""}
                 ],
                 action: "отправить",
-                type: "team",
+                message: "Предложение о волонтёрстве. Ожидайте, пожалуйста, ответа.",
                 callerButtonText: "вступить в команду"
             }
         },
@@ -253,7 +253,7 @@ angular.module('app').constant('translations', {
                     { placeholder: "Имя", type: "text", key: "name", value: "" },
                     { placeholder: "Организация", type: "text", key: "organization", value: "" },
                     { placeholder: "Email", type: "email", key: "email", value: "" },
-                    { placeholder: "Сообщение", type: '', key: "message", value: "" }
+                    { placeholder: "Сообщение*", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
                 message: "Предложение о партнёрстве отправлено.",
@@ -266,10 +266,10 @@ angular.module('app').constant('translations', {
                     { placeholder: "Имя", type: "text", key: "name", value: "" },
                     { placeholder: "Род занятия", type: "text", key: "occupation", value: "" },
                     { placeholder: "Email", type: "email", key: "email", value: "" },
-                    { placeholder: "Отзыв", type: '', key: "message", value: "" }
+                    { placeholder: "Отзыв*", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
-                message: "Отзыв успешно отправлен. Ожидайте, пожалуйста, его публикации.",
+                message: "Ваш відгук був успішно відправлений. Очікуйте, будь ласка, на його перевірку.",
                 callerButtonText: "оставить отзыв"
             },
             contacts: {
@@ -278,7 +278,7 @@ angular.module('app').constant('translations', {
                 placeholders: [
                     { placeholder: "Имя", type: "text", key: "name", value: "" },
                     { placeholder: "Email", type: "email", key: "email", value: "" },
-                    { placeholder: "Вопросы и предложения", type: '', key: "message", value: "" }
+                    { placeholder: "Вопросы и предложения*", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
                 message: "Ваше сообщение отправлено.",
@@ -291,10 +291,10 @@ angular.module('app').constant('translations', {
                     { placeholder: "Имя", type: "text", key: "name", value: "" },
                     { placeholder: "Род занятия", type: "text", key: "occupation", value: "" },
                     { placeholder: "Email", type: "email", key: "email", value: "" },
-                    { placeholder: "Отзыв", type: '', key: "review", value: "" }
+                    { placeholder: "Повідомлення*", type: '', key: "review", value: "" }
                 ],
                 action: "отправить",
-                type: "team",
+                message: "Пропозиція про волонтество успішно відправлена. Очікуйте, будь ласка, на відповідь.",
                 callerButtonText: "вступить в команду"
             }
         },
@@ -306,10 +306,10 @@ angular.module('app').constant('translations', {
                     {placeholder: "Name", type: "text", key: "name", value: ""},
                     {placeholder: "Organization", type: "text", key: "organization", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Message", type: '', key: "message", value: ""}
+                    {placeholder: "Message*", type: '', key: "message", value: ""}
                 ],
                 action: "send",
-                message: "Message was successfully sent. Please, wait for review.",
+                message: "Your partnership proposal was successfully sent.. Please wait for response if needed.",
                 callerButtonText: "become a partner"
             },
             reviews: {
@@ -319,10 +319,10 @@ angular.module('app').constant('translations', {
                     {placeholder: "Name", type: "text", key: "name", value: ""},
                     {placeholder: "Occupation", type: "text", key: "occupation", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Review", type: '', key: "message", value: ""}
+                    {placeholder: "Review*", type: '', key: "message", value: ""}
                 ],
                 action: "send",
-                message: "Your review is successfully sent. Please wait for its moderation.",
+                message: "Your review was successfully sent. Please wait for its moderation.",
                 callerButtonText: "write a review"
             },
             contacts: {
@@ -331,7 +331,7 @@ angular.module('app').constant('translations', {
                 placeholders: [
                     {placeholder: "Name", type: "text", key: "name", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Questions and suggestions", type: '', key: "message", value: ""}
+                    {placeholder: "Questions and suggestions*", type: '', key: "message", value: ""}
                 ],
                 action: "send",
                 message: "Your message was sent.",
@@ -344,10 +344,10 @@ angular.module('app').constant('translations', {
                     {placeholder: "Name", type: "text", key: "name", value: ""},
                     {placeholder: "Occupation", type: "text", key: "occupation", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Message", type: '', key: "review", value: ""}
+                    {placeholder: "Message*", type: '', key: "review", value: ""}
                 ],
                 action: "send",
-                type: "team",
+                message: "Your proposal was successfully sent. Please wait for an answer.",
                 callerButtonText: "join us"
             }
         }

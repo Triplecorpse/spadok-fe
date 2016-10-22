@@ -1,6 +1,9 @@
 (function() {
     angular.module('app').service('dataService', ['$http', '$q', function ($http, $q) {
-        var origin = window.location.protocol + '//' + window.location.host; //IE10 crunch
+
+        //IE10 crunch
+        var origin = window.location.protocol + '//' + window.location.host;
+
         var self = this;
         var dataQ = $q.defer();
         var data = {
