@@ -203,7 +203,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Сообщение", type: '', key: "message", value: ""}
                 ],
                 action: "отправить",
-                messeage: "Предложение о партнёрстве отправлено.",
+                message: "Предложение о партнёрстве отправлено.",
                 callerButtonText: "стать партнёром"
             },
             reviews: {
@@ -216,7 +216,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Отзыв", type: '', key: "message", value: ""}
                 ],
                 action: "отправить",
-                messeage: "Отзыв успешно отправлен. Ожидайте, пожалуйста, его публикации.",
+                message: "Отзыв успешно отправлен. Ожидайте, пожалуйста, его публикации.",
                 callerButtonText: "оставить отзыв"
             },
             contacts: {
@@ -228,7 +228,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Вопросы и предложения", type: '', key: "message", value: ""}
                 ],
                 action: "отправить",
-                messeage: "Ваше сообщение отправлено.",
+                message: "Ваше сообщение отправлено.",
                 callerButtonText: "написать нам"
             },
             team: {
@@ -256,7 +256,7 @@ angular.module('app').constant('translations', {
                     { placeholder: "Сообщение", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
-                messeage: "Предложение о партнёрстве отправлено.",
+                message: "Предложение о партнёрстве отправлено.",
                 callerButtonText: "стать партнёром"
             },
             reviews: {
@@ -269,7 +269,7 @@ angular.module('app').constant('translations', {
                     { placeholder: "Отзыв", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
-                messeage: "Отзыв успешно отправлен. Ожидайте, пожалуйста, его публикации.",
+                message: "Отзыв успешно отправлен. Ожидайте, пожалуйста, его публикации.",
                 callerButtonText: "оставить отзыв"
             },
             contacts: {
@@ -281,7 +281,7 @@ angular.module('app').constant('translations', {
                     { placeholder: "Вопросы и предложения", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
-                messeage: "Ваше сообщение отправлено.",
+                message: "Ваше сообщение отправлено.",
                 callerButtonText: "написать нам"
             },
             team: {
@@ -322,7 +322,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Review", type: '', key: "message", value: ""}
                 ],
                 action: "send",
-                messeage: "Your review is successfully sent. Please wait for its moderation.",
+                message: "Your review is successfully sent. Please wait for its moderation.",
                 callerButtonText: "write a review"
             },
             contacts: {
@@ -334,7 +334,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Questions and suggestions", type: '', key: "message", value: ""}
                 ],
                 action: "send",
-                messeage: "Your message was sent.",
+                message: "Your message was sent.",
                 callerButtonText: "write to us"
             },
             team: {

@@ -1,5 +1,5 @@
 (function() {
-    angular.module('app').directive('spdModalCallerButton', ["translations", "i18nService", function(config, i18nService) {
+    angular.module('app').directive('spdModalCallerButton', ["translations", "i18nService", function (translations, i18nService) {
 
         return {
             restrict: "E",
@@ -15,7 +15,7 @@
             $scope.options.videos = [];
             $scope.options.init = {};
 
-            $scope.buttonText = config.modals[i18nService.currentLanguage][$scope.options.type].callerButtonText;
+            $scope.buttonText = translations.modals[i18nService.currentLanguage][$scope.options.type].callerButtonText;
 
             $scope.openModal = function() {
                 var options = angular.copy($scope.options);
