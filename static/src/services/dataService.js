@@ -13,7 +13,7 @@
         };
 
         function addDataServiceUrl(relativeUrl) {
-            if (relativeUrl && relativeUrl.startsWith('/pmedia?')) {
+            if (relativeUrl && (relativeUrl.indexOf('/pmedia?') > -1)) {
                 return config.dataServiceUrl + relativeUrl;
             } else {
                 return relativeUrl;

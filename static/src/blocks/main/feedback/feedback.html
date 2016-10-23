@@ -1,11 +1,14 @@
 <div class="container-fluid">
     <div class="feedback-wrapper">
         <h3 class="feedback-header" translate="interface.feedback"></h3>
-        <form name="feedback" class="feedback-input-group" ng-submit="feedback.submit()">
-            <input type="text" class="feedback-input" placeholder="Ваше имя">
-            <input type="text" class="feedback-input" placeholder="Ваш еmail">
-            <textarea type="text" class="feedback-input feedback-input-textarea" placeholder="Ваши вопросы и предложения"></textarea>
-            <button type="submit" class="feedback-submit">отправить</button>
+        <form name="form" class="feedback-input-group" ng-submit="submit()">
+            <div class="input-group feedback-input-group" ng-repeat="input in placeholders track by $index" ng-if="!$last">
+                <input type="{{input.type}}" class="feedback-input" placeholder="{{input.placeholder}}" ng-model="input.value">
+            </div>
+            <div class="input-group feedback-input-group">
+                <textarea id="inp-last" class="feedback-input feedback-input-textarea" placeholder="{{placeholders[placeholders.length - 1].placeholder}}" ng-model="placeholders[placeholders.length - 1].value" required></textarea>
+            </div>
+            <button type="submit" class="feedback-submit">{{action}}</button>
         </form>
     </div>
 </div>
