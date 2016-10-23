@@ -1,0 +1,19 @@
+<div class="user-item" ng-if="user._id">
+    <div class="user-item-picture" style="background-image: url('{{user.picture}}')"></div>
+    <div class="user-item-data-block">
+        <h4 class="user-item-contacts-header">Responsible person:</h4>
+        <h4 class="user-item-header" translate="{{'team.user' + user._id + '.displayName'}}"></h4>
+        <h5 class="user-item-position" translate="{{'team.user' + user._id + '.displayPosition'}}"></h5>
+        <a ng-href="{{user.contacts.vk}}" target="_blank" class="user-item-social icon-vk" ng-if="user.contacts.vk"></a>
+        <a ng-href="{{user.contacts.fb}}" target="_blank" class="user-item-social icon-facebook" ng-if="user.contacts.vk"></a>
+    </div>
+    <div class="user-item-data-block">
+        <p class="user-item-contacts-header">Email:</p>
+        <p class="user-item-contacts-data" ng-if="isEmailShown">{{user.email}}</p>
+        <p class="user-item-contacts-data clickable" ng-click="showEmail()" ng-if="!isEmailShown">Show email</p>
+    </div>
+    <div class="user-item-data-block">
+        <p class="user-item-contacts-header">Contact Phones:</p>
+        <p class="user-item-contacts-data" ng-repeat="phone in user.contacts.phones track by $index">{{phone}}</p>
+    </div>
+</div>

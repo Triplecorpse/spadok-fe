@@ -25,6 +25,7 @@ var paths = {
         './src/index.js', './src/config.js', './src/translations.js', './src/states/**/*.js', './src/filters/**/*.js', './src/blocks/**/*.js', './src/services/**/*.js'],
     styles: ['./src/css/bootstrap.css',
         './src/css/swiper.css',
+        './src/css/fontello.css',
         './src/css/general.scss', './src/css/variablse.scss', './src/css/mixins.scss', './src/states/**/*.scss', './src/blocks/**/*.scss'],
     fonts: ['./bower_components/bootstrap/dist/fonts/**/*.*', './src/font/**/*.*'],
     htmls: ['./src/index.html', './src/**/*.html'],

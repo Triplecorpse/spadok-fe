@@ -15,6 +15,9 @@
             }
 
             function link(scope) {
+                scope.user = _.find(dataService.users, (user) => {
+                    return user._id === scope.project.project.ownerId;
+                });
                 if(scope.project.project.picture.indexOf('http') !== 0) {
                     scope.absPicture = dataService.origin + '/' + scope.project.project.picture;
                 } else {
