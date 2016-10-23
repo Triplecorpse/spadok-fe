@@ -24,6 +24,11 @@ angular.module('app').constant('translations', {
                     phones: 'Телефон(ы):',
                     showEmail: 'Показать адрес'
                 },
+                partnerItem: {
+                    helped: 'Помогли',
+                    expand: 'развернуть',
+                    contract: 'свернуть'
+                },
                 stats: {
                     toBeginning: 'до начала',
                     wasCompletedOn: 'назад завершен',
@@ -93,6 +98,11 @@ angular.module('app').constant('translations', {
                     phones: 'Телефон(и):',
                     showEmail: 'Показати адресу'
                 },
+                partnerItem: {
+                    helped: 'Допомогли',
+                    expand: 'розгорнути',
+                    contract: 'згорнути'
+                },
                 stats: {
                     toBeginning: 'до початку',
                     wasCompletedOn: 'назад завершений',
@@ -124,7 +134,7 @@ angular.module('app').constant('translations', {
                     collected: "зібрано (з {{total}})"
                 },
                 partners: {
-                    header: "Наші партнеры"
+                    header: "Наші партнери"
                 },
                 contacts: {
                     address: "Адреса",
@@ -161,6 +171,11 @@ angular.module('app').constant('translations', {
                     email: 'Email:',
                     phones: 'Phone(s):',
                     showEmail: 'Show email'
+                },
+                partnerItem: {
+                    helped: 'Helped',
+                    expand: 'expand',
+                    contract: 'contract'
                 },
                 stats: {
                     toBeginning: 'to start',
@@ -394,13 +409,19 @@ angular.module('app').constant('translations', {
             donated: [
                 {ends: '0|1|2|3|4|5|6|7|8|9', out: 'внесли средства'},
                 {is: '1', out: 'внёс средства'}
+            ],
+            project: [
+                { ends: '0|2|3|4|5|6|7|8|9', out: 'проектам' },
+                { ends: '1', out: 'проекту' },
+                { is: '11', out: 'проектам' }
             ]
         },
         uk: {
             man: [
-                { ends: '0|1|5|6|7|8|9', out: 'человек' },
-                { ends: '2|3|4', out: 'человека' },
-                { is: '11|12|13|14|15|16|17|18|19|20|21', out: 'человек' }
+                { ends: '0|5|6|7|8|9', out: 'людей' },
+                { ends: '1', out: 'людина' },
+                { ends: '2|3|4', out: 'людини' },
+                { is: '11|12|13|14|15|16|17|18|19', out: 'людей' }
             ],
             volunteer: [
                 { ends: '1', out: 'волонтёр' },
@@ -417,6 +438,11 @@ angular.module('app').constant('translations', {
             donated: [
                 { ends: '0|1|2|3|4|5|6|7|8|9', out: 'внесли средства' },
                 { is: '1', out: 'внёс средства' }
+            ],
+            project: [
+                { ends: '0|2|3|4|5|6|7|8|9', out: 'проектам' },
+                { ends: '1', out: 'проекту' },
+                { is: '11', out: 'проектам' }
             ]
         },
         en: {
@@ -434,6 +460,10 @@ angular.module('app').constant('translations', {
              ],
              donated: [
                  {ends: '0|1|2|3|4|5|6|7|8|9', out: 'donated'}
+             ],
+             project: [
+                 { ends: '0|1|2|3|4|5|6|7|8|9', out: 'projects' },
+                 { is: '1', out: 'project' }
              ]
          }
     }

@@ -11,7 +11,7 @@
         };
 
         function controller($scope, $sce) {
-            $scope.buttonHeader = 'развернуть';
+            $scope.buttonHeader = 'interface.directives.partnerItem.expand';
             $scope.itemsLength = $scope.options.displayAchievements.length;
             $scope.items = _.sample(_.map($scope.options.displayAchievements, (element) => {
                 return $sce.trustAsHtml(element);
@@ -22,12 +22,12 @@
                 $scope.maximized = !$scope.maximized;
 
                 if($scope.maximized) {
-                    $scope.buttonHeader = 'свернуть';
+                    $scope.buttonHeader = 'interface.directives.partnerItem.contract';
                     $scope.items = _.map($scope.options.displayAchievements, (element) => {
                         return $sce.trustAsHtml(element);
                     });
                 } else {
-                    $scope.buttonHeader = 'развернуть';
+                    $scope.buttonHeader = 'interface.directives.partnerItem.expand';
                     $scope.items = _.sample(_.map($scope.options.displayAchievements, (element) => {
                         return $sce.trustAsHtml(element);
                     }), 2);
