@@ -12,8 +12,8 @@
 
         function controller($scope, $sce) {
             $scope.buttonHeader = 'развернуть';
-            $scope.itemsLength = $scope.options.achievements.length;
-            $scope.items = _.sample(_.map($scope.options.achievements, (element) => {
+            $scope.itemsLength = $scope.options.displayAchievements.length;
+            $scope.items = _.sample(_.map($scope.options.displayAchievements, (element) => {
                 return $sce.trustAsHtml(element);
             }), 2);
 
@@ -23,12 +23,12 @@
 
                 if($scope.maximized) {
                     $scope.buttonHeader = 'свернуть';
-                    $scope.items = _.map($scope.options.achievements, (element) => {
+                    $scope.items = _.map($scope.options.displayAchievements, (element) => {
                         return $sce.trustAsHtml(element);
                     });
                 } else {
                     $scope.buttonHeader = 'развернуть';
-                    $scope.items = _.sample(_.map($scope.options.achievements, (element) => {
+                    $scope.items = _.sample(_.map($scope.options.displayAchievements, (element) => {
                         return $sce.trustAsHtml(element);
                     }), 2);
                 }

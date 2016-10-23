@@ -18,6 +18,12 @@ angular.module('app').constant('translations', {
                     button: "о проекте",
                     money: 'необходимо'
                 },
+                userItem: {
+                    responsible: 'Ответственное лицо:',
+                    email: 'Электронный адрес:',
+                    phones: 'Телефон(ы):',
+                    showEmail: 'Показать адрес'
+                },
                 stats: {
                     toBeginning: 'до начала',
                     wasCompletedOn: 'назад завершен',
@@ -81,6 +87,12 @@ angular.module('app').constant('translations', {
                     button: "про проект",
                     money: 'необхідно'
                 },
+                userItem: {
+                    responsible: 'Відповідальна особа:',
+                    email: 'Електронна адреса:',
+                    phones: 'Телефон(и):',
+                    showEmail: 'Показати адресу'
+                },
                 stats: {
                     toBeginning: 'до початку',
                     wasCompletedOn: 'назад завершений',
@@ -128,7 +140,7 @@ angular.module('app').constant('translations', {
             }
         },
         en: {
-            currency: 'eur',
+            currency: '{{value}} eur',
             header: {
                 name: 'Spadok',
                 logo: 'A Charitable Foundation "Spadok"',
@@ -143,6 +155,12 @@ angular.module('app').constant('translations', {
                 projectItem: {
                     button: "about",
                     money: 'necessary'
+                },
+                userItem: {
+                    responsible: 'Responsible person:',
+                    email: 'Email:',
+                    phones: 'Phone(s):',
+                    showEmail: 'Show email'
                 },
                 stats: {
                     toBeginning: 'to start',

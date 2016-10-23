@@ -57,6 +57,14 @@
 
 @media print {
     .user-item {
-        color: #000;
+        &-data-block {
+            border-right: 1px solid #000;
+        }
+        &-header {
+            color: #000;
+        }
+        &-social {
+            display: none;
+        }
     }
 }

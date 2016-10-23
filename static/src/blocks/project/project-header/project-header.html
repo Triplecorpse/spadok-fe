@@ -1,7 +1,7 @@
 <div class="project-header-image" style="background-image: url('{{project.project.picture}}')">
     <div class="project-header-image-layer"></div>
     <h1 class="project-header-image-header" translate="{{'projects.project' + project.project._id + '.displayName'}}"></h1>
-    <div class="project-header-image-play-button" ng-if="video"></div>
+    <div class="project-header-image-play-button" ng-if="video" ng-click="gotoVideo()"></div>
     <div class="project-header-image-text" ng-if="video" ng-click="gotoVideo()" translate="interface.pages.project.lookVideo"></div>
 </div>
 <spd-project-stats project="project.project"></spd-project-stats>

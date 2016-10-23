@@ -19,14 +19,16 @@ angular.module('app').service('i18nService', ['dataService', function (dataServi
     }
 
     function setAchievements(code) {
-        dataService.partners = _.map(dataService.partners, (element) => {
-            element.achievements = element[`${langDic[code]}Achievements`] || element[`rusAchievements`];
-            return element;
+        dataService.partners = _.map(dataService.partners, (partner) => {
+            partner.displayAchievements = _.map(partner.achievements, (achievement) => {
+                return achievement[code];
+            });
+            return partner;
         });
     }
 
     function setCurrency(code) {
-        if(code === 'ru') {
+        if(code === 'ru' || code === 'uk') {
             dataService.projects = _.map(dataService.projects, (element) => {
                 element.money = element.uah;
                 element.collected = element.collectedUah;
