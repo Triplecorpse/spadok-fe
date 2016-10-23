@@ -12,7 +12,9 @@
         };
 
         function link(scope) {
-            scope.teamMembers = dataService.users;
+            scope.teamMembers = _.filter(dataService.users, (element) => {
+                return element.isInTeam;
+            });
             scope.options = {
                 type: "team"
             }
