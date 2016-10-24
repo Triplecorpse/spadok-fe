@@ -19,3 +19,9 @@
         <div ng-class="'project-carousel-bullet ' + ($index === 0 ? 'project-carousel-bullet-active' : '')" ng-repeat="bullet in projects track by $index" ng-click="goto($index)"></div>
     </div>
 </div>
+<div class="project-carousel" ng-if="projects.length === 0">
+    <div class="project-carousel-slide-wrapper" style="background-image: url('https://pp.vk.me/c837524/v837524062/8cf7/dmH095hf0Bs.jpg')">
+        <div class="project-carousel-slide-layer"></div>
+        <h3 class="project-carousel-slide-header no-content">Нет активных проектов</h3>
+    </div>
+</div>

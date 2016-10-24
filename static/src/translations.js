@@ -2,7 +2,7 @@ angular.module('app').constant('translations', {
     //translation data
     interface: {
         ru: {
-            currency: '{{value}} грн',
+            currency: '{{value}} ₴',
             header: {
                 name: 'Спадок',
                 logo: 'Благотворительный фонд "Спадок"',
@@ -76,7 +76,7 @@ angular.module('app').constant('translations', {
             }
         },
         uk: {
-            currency: '{{value}} грн',
+            currency: '{{value}} ₴',
             header: {
                 name: 'Спадок',
                 logo: 'Благодійний фонд "Спадок"',
@@ -150,7 +150,7 @@ angular.module('app').constant('translations', {
             }
         },
         en: {
-            currency: '{{value}} eur',
+            currency: '{{value}} €',
             header: {
                 name: 'Spadok',
                 logo: 'A Charitable Foundation "Spadok"',
@@ -271,7 +271,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Имя", type: "text", key: "name", value: ""},
                     {placeholder: "Род занятия", type: "text", key: "occupation", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Сообщение*", type: '', key: "review", value: ""}
+                    { placeholder: "Сообщение*", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
                 message: "Предложение о волонтёрстве. Ожидайте, пожалуйста, ответа.",
@@ -324,7 +324,7 @@ angular.module('app').constant('translations', {
                     { placeholder: "Имя", type: "text", key: "name", value: "" },
                     { placeholder: "Род занятия", type: "text", key: "occupation", value: "" },
                     { placeholder: "Email", type: "email", key: "email", value: "" },
-                    { placeholder: "Повідомлення*", type: '', key: "review", value: "" }
+                    { placeholder: "Повідомлення*", type: '', key: "message", value: "" }
                 ],
                 action: "отправить",
                 message: "Пропозиція про волонтество успішно відправлена. Очікуйте, будь ласка, на відповідь.",
@@ -377,7 +377,7 @@ angular.module('app').constant('translations', {
                     {placeholder: "Name", type: "text", key: "name", value: ""},
                     {placeholder: "Occupation", type: "text", key: "occupation", value: ""},
                     {placeholder: "Email", type: "email", key: "email", value: ""},
-                    {placeholder: "Message*", type: '', key: "review", value: ""}
+                    { placeholder: "Message*", type: '', key: "message", value: "" }
                 ],
                 action: "send",
                 message: "Your proposal was successfully sent. Please wait for an answer.",

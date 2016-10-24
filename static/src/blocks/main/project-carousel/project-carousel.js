@@ -55,7 +55,7 @@
                 return element.isCompleted === false;
             });
 
-            scope.projectId = scope.projects[0]._id;
+            scope.projectId = scope.projects[0] && scope.projects[0]._id;
         }
     }
 })();

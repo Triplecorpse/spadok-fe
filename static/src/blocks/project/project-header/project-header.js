@@ -19,7 +19,7 @@
                     return user._id === scope.project.project.ownerId;
                 });
                 if(scope.project.project.picture.indexOf('http') !== 0) {
-                    scope.absPicture = dataService.origin + '/' + scope.project.project.picture;
+                    scope.absPicture = `{dataService.origin}/${scope.project.project.picture}`;
                 } else {
                     scope.absPicture = scope.project.project.picture;
                 }
