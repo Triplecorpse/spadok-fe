@@ -9,8 +9,8 @@
     }
 
     function link(scope) {
-        scope.showEmail = () => {
-            scope.isEmailShown = true;
+        scope.showContacts = () => {
+            scope.isContactShown = true;
         }
     }
 }])

@@ -13,6 +13,7 @@ angular.module('app').constant('translations', {
             feedback: "Возникли ли у вас вопросы или предложения?",
             reviews: "Отзывы",
             partners: "Наши партнёры",
+            noProjects: 'Нет проектов',
             directives: {
                 projectItem: {
                     button: "о проекте",
@@ -22,7 +23,7 @@ angular.module('app').constant('translations', {
                     responsible: 'Ответственное лицо:',
                     email: 'Электронный адрес:',
                     phones: 'Телефон(ы):',
-                    showEmail: 'Показать адрес'
+                    showContacts: 'Показать контакты'
                 },
                 partnerItem: {
                     helped: 'Помогли',
@@ -86,7 +87,8 @@ angular.module('app').constant('translations', {
             subscription: "Підпишись на розсилку проектів",
             feedback: "Чи виникли у вас питання або пропозиції?",
             reviews: "Відгуки",
-            partners: "Наші партнеры",
+            partners: "Наші партнери",
+            noProjects: 'Нема проектів',
             directives: {
                 projectItem: {
                     button: "про проект",
@@ -96,7 +98,7 @@ angular.module('app').constant('translations', {
                     responsible: 'Відповідальна особа:',
                     email: 'Електронна адреса:',
                     phones: 'Телефон(и):',
-                    showEmail: 'Показати адресу'
+                    showContacts: 'Показати контакти'
                 },
                 partnerItem: {
                     helped: 'Допомогли',
@@ -123,7 +125,7 @@ angular.module('app').constant('translations', {
                 },
                 projects: {
                     header: "Проекти",
-                    selectButtons: { active: "активні", completed: "реализованні" }
+                    selectButtons: { active: "активні", completed: "реалізовані" }
                 },
                 project: {
                     lookVideo: "Подивитися відео",
@@ -161,6 +163,7 @@ angular.module('app').constant('translations', {
             feedback: "Do you have any feedback?",
             reviews: "Reviews",
             partners: "Our Partners",
+            noProjects: 'No projects here',
             directives: {
                 projectItem: {
                     button: "about",
@@ -170,7 +173,7 @@ angular.module('app').constant('translations', {
                     responsible: 'Responsible person:',
                     email: 'Email:',
                     phones: 'Phone(s):',
-                    showEmail: 'Show email'
+                    showContacts: 'Show contacts'
                 },
                 partnerItem: {
                     helped: 'Helped',

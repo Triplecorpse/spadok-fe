@@ -9,8 +9,11 @@
         </div>
     </div>
     <div class="projects-list-wrapper-area">
-        <div class="projects-list-wrapper">
+        <div class="projects-list-wrapper" ng-if="projects.length > 0">
             <spd-project-item ng-repeat="project in projects track by $index" project="project"></spd-project-item>
+        </div>
+        <div class="projects-list-wrapper no-project" ng-if="projects.length === 0">
+            <h3 class="projects-list-no-project" translate="interface.noProjects"></h3>
         </div>
     </div>
 </div>

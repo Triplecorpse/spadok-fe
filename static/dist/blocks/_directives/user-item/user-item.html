@@ -8,12 +8,13 @@
         <a ng-href="{{user.contacts.fb}}" target="_blank" class="user-item-social icon-facebook" ng-if="user.contacts.vk"></a>
     </div>
     <div class="user-item-data-block">
-        <p class="user-item-contacts-header" translate="interface.directives.userItem.email"></p>
-        <p class="user-item-contacts-data" ng-if="isEmailShown">{{user.email}}</p>
-        <p class="user-item-contacts-data clickable" ng-click="showEmail()" ng-if="!isEmailShown" translate="interface.directives.userItem.showEmail"></p>
+        <p class="user-item-contacts-header" translate="interface.directives.userItem.email" ng-if="isContactShown"></p>
+        <p class="user-item-contacts-data" ng-if="isContactShown">{{user.email}}</p>
+        <p class="user-item-contacts-data clickable" ng-click="showContacts()" ng-if="!isContactShown" translate="interface.directives.userItem.showContacts"></p>
     </div>
-    <div class="user-item-data-block">
+    <div class="user-item-data-block" ng-if="isContactShown">
         <p class="user-item-contacts-header" translate="interface.directives.userItem.phones"></p>
         <p class="user-item-contacts-data" ng-repeat="phone in user.contacts.phones track by $index">{{phone}}</p>
+        <!--<p class="user-item-contacts-data clickable" ng-click="showContacts()" ng-if="!isContactShown" translate="interface.directives.userItem.showContacts"></p>-->
     </div>
 </div>
